@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SplitMethodsInBookingSystemsApps
 {
@@ -13,5 +9,26 @@ namespace SplitMethodsInBookingSystemsApps
         {
 
         }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            dateTextBox.Text = Calendar1.SelectedDate.ToString("dd-MM-yyyy");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Calendar1.Visible = true;
+        }
+
+        protected void Calendar2_SelectionChanged(object sender, EventArgs e)
+        {
+            dateOutTextBox1.Text = Calendar2.SelectedDate.ToString("dd-MM-yyyy");
+
+        }
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Calendar1.Visible = true;
+        }
+
     }
 }
